@@ -7,7 +7,7 @@ export default hopeTheme({
 
   author: {
     name: "unifyz",
-    url: "https://mister-hope.com",
+    url: "https://blog.ifeng.asia",
   },
 
   iconAssets: "fontawesome-with-brands",
@@ -25,7 +25,7 @@ export default hopeTheme({
   sidebar,
 
   // 页脚
-  footer: "默认页脚",
+  footer: "footer",
   displayFooter: true,
 
   // 加密配置
