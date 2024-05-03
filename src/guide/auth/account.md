@@ -37,16 +37,16 @@ icon: circle-info
 - 返回示例
 ```json
 {
-  "code": 200,
-  "msg": "success",
-  "data": {
-    "id": 1,
-    "username": "admin",
-    "disabled": false,
-    "role": "admin"
-    "permission": 0,
-    "otp": true
-  }
+    "code": 200,
+    "msg": "success",
+    "data": {
+        "id": 1,
+        "username": "admin",
+        "disabled": false,
+        "role": "admin",
+        "permission": 0,
+        "otp": true
+    }
 }
 ```
 
@@ -69,7 +69,7 @@ icon: circle-info
 - 返回示例
 ```json
 {
-  "code": 200,
-  "msg": "success",
+    "code": 200,
+    "msg": "success"
 }
 ```

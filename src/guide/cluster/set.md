@@ -35,9 +35,9 @@ icon: circle-info
 - 返回示例
 ```json
 {
-  "code": 200,
-  "msg": "success",
-  "data": "WebDav-Storage" 
+    "code": 200,
+    "msg": "success",
+    "data": "WebDav-Storage" 
 }
 ```
 
@@ -69,9 +69,9 @@ icon: circle-info
 - 返回示例
 ```json
 {
-  "code": 200,
-  "msg": "success",
-  "data": "WebDav-Storage" 
+    "code": 200,
+    "msg": "success",
+    "data": "WebDav-Storage" 
 }
 ```
 
@@ -103,8 +103,8 @@ icon: circle-info
 - 返回示例
 ```json
 {
-  "code": 200,
-  "msg": "success",
+    "code": 200,
+    "msg": "success"
 }
 ```
 
@@ -136,7 +136,7 @@ icon: circle-info
 - 返回示例
 ```json
 {
-  "code": 200,
-  "msg": "success",
+    "code": 200,
+    "msg": "success"
 }
 ```

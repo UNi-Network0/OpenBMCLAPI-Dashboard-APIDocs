@@ -16,10 +16,9 @@ GET /api/cluster/type
 
 ```json
 {
-  "code": 200,
-  "msg": "success",
-  "data": "python-openbmclapi" 
-
+    "code": 200,
+    "msg": "success",
+    "data": "python-openbmclapi"
 }
 ```
 
@@ -54,13 +53,12 @@ GET /api/cluster/status
 
 ```json
 {
-  "code": 200,
-  "msg": "success",
-  "data": {
-    "isenabled": true,
-    "issync": false
-  }
-
+    "code": 200,
+    "msg": "success",
+    "data": {
+        "isenabled": true,
+        "issync": false
+    }
 }
 ```
 
@@ -94,16 +92,15 @@ GET /api/cluster/info
 
 ```json
 {
-  "code": 200,
-  "msg": "success",
-  "data": {
-    "name": "name",
-    "_id": "cluster_id",
-    "fullsize": true,
-    "trust": "trust",
-    "noFastEnable": false,
-  }
-
+    "code": 200,
+    "msg": "success",
+    "data": {
+        "name": "name",
+        "_id": "cluster_id",
+        "fullsize": true,
+        "trust": "trust",
+        "noFastEnable": false
+    }
 }
 ```
 
@@ -149,15 +146,13 @@ GET /api/cluster/data
                 {
                     "hits": 12,
                     "bytes": 13072703
-                },
-         
+                }
             ],
             "days": [
                 {
                     "hits": 0,
                     "bytes": 0
-                },
-
+                }
             ],
             "months": [
                 {
