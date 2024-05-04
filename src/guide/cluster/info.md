@@ -1,4 +1,4 @@
-![image](https://github.com/UNi-Network0/OpenBMCLAPI-Dashboard-APIDocs/assets/68094002/b1e16c6d-5da8-4979-bc1b-f2ba7fa3d582)---
+---
 title: 节点相关
 icon: circle-info
 ---
