@@ -9,24 +9,24 @@ icon: circle-info
 - 例：`/api/cluster/set/storage/delete?type="webdav"&username="test&password="test&endpoint="http://127.0.0.1/dav`
 - 请求参数
 
-| 名称       | 位置 | 类型   | 必选 | 中文名     | 说明       |
-| ---------- | ---- | ------ | ---- | ---------- | ---------- |
-| type | body | string | 是   | 储存类型 | 可选 webdav / local |
-| username | body | string | 是   | WebDav用户名 | WebDav用户名 |
-| password | body | string | 是   | WebDav密码 | WebDav密码 |
-| endpoint | body | string | 是   | WebDav Endpoint | WebDav文件储存地址 |
-| localpath | body | string | 是   | 本地储存地址 | 本地储存地址 |
+| 名称       | 位置  | 类型   | 必选 | 中文名           | 说明                |
+| ---------- | ---- | ------ | ---- | --------------- | ------------------- |
+| type       | body | string | 是   | 储存类型         | 可选 webdav / local |
+| username   | body | string | 是   | WebDav用户名     | WebDav用户名        |
+| password   | body | string | 是   | WebDav密码       | WebDav密码          |
+| endpoint   | body | string | 是   | WebDav Endpoint | WebDav文件储存地址   |
+| localpath  | body | string | 是   | 本地储存地址     | 本地储存地址         |
 
 - 返回结果: 
 
-| 状态码 | 状态码含义                                              | 说明 | 数据模型 |
+| 状态码 | 状态码含义                                               | 说明 | 数据模型  |
 | ------ | ------------------------------------------------------- | ---- | -------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | 成功 | Inline   |
 
 - 返回数据结构
 
 状态码 **200**
-| 名称      | 类型    | 必选 | 约束 | 中文名 | 说明   |
+| 名称      | 类型     | 必选 | 约束 | 中文名 | 说明   |
 | --------- | ------- | ---- | ---- | ------ | ------ |
 | » code    | integer | true | none |        | 状态码 |
 | » message | string  | true | none |        | 信息   |
@@ -47,20 +47,20 @@ icon: circle-info
 - 例：`/api/cluster/set/storage/delete?type="webdav"`
 - 请求参数
 
-| 名称       | 位置 | 类型   | 必选 | 中文名     | 说明       |
-| ---------- | ---- | ------ | ---- | ---------- | ---------- |
-| type | body | string | 是   | 储存类型 | 可选 webdav / local |
+| 名称       | 位置  | 类型   | 必选 | 中文名      | 说明                |
+| ---------- | ---- | ------ | ---- | ---------- | ------------------- |
+| type       | body | string | 是   | 储存类型    | 可选 webdav / local |
 
 - 返回结果: 
 
-| 状态码 | 状态码含义                                              | 说明 | 数据模型 |
+| 状态码 | 状态码含义                                               | 说明 | 数据模型  |
 | ------ | ------------------------------------------------------- | ---- | -------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | 成功 | Inline   |
 
 - 返回数据结构
 
 状态码 **200**
-| 名称      | 类型    | 必选 | 约束 | 中文名 | 说明   |
+| 名称      | 类型     | 必选 | 约束 | 中文名 | 说明   |
 | --------- | ------- | ---- | ---- | ------ | ------ |
 | » code    | integer | true | none |        | 状态码 |
 | » message | string  | true | none |        | 信息   |
@@ -81,12 +81,12 @@ icon: circle-info
 - 例：`/api/cluster/set/domain?dm="666.com"`
 - 请求参数
 
-| 名称       | 位置 | 类型   | 必选 | 中文名     | 说明       |
+| 名称       | 位置 | 类型    | 必选 | 中文名     | 说明        |
 | ---------- | ---- | ------ | ---- | ---------- | ---------- |
-| dm | body | string | 是   | 域名 | 无 |
+| dm         | body | string | 是   | 域名       | 无          |
 - 返回结果: 
 
-| 状态码 | 状态码含义                                              | 说明 | 数据模型 |
+| 状态码 | 状态码含义                                               | 说明 | 数据模型  |
 | ------ | ------------------------------------------------------- | ---- | -------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | 成功 | Inline   |
 
@@ -94,11 +94,10 @@ icon: circle-info
 
 状态码 **200**
 
-| 名称      | 类型    | 必选 | 约束 | 中文名 | 说明   |
+| 名称      | 类型    | 必选  | 约束 | 中文名 | 说明   |
 | --------- | ------- | ---- | ---- | ------ | ------ |
 | » code    | integer | true | none |        | 状态码 |
 | » message | string  | true | none |        | 信息   |
-| » data    | string  | true | none |        | data   |
 
 - 返回示例
 ```json
@@ -114,12 +113,12 @@ icon: circle-info
 - 例：`/api/cluster/set/byoc?byoc=true`
 - 请求参数
 
-| 名称       | 位置 | 类型   | 必选 | 中文名     | 说明       |
-| ---------- | ---- | ------ | ---- | ---------- | ---------- |
-| byoc | body | boolean | 是   | 域名 | 无 |
+| 名称       | 位置 | 类型     | 必选 | 中文名     | 说明       |
+| ---------- | ---- | ------- | ---- | ---------- | ---------- |
+| byoc       | body | boolean | 是   | 域名       | 无         |
 - 返回结果: 
 
-| 状态码 | 状态码含义                                              | 说明 | 数据模型 |
+| 状态码 | 状态码含义                                               | 说明 | 数据模型  |
 | ------ | ------------------------------------------------------- | ---- | -------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | 成功 | Inline   |
 
@@ -127,11 +126,10 @@ icon: circle-info
 
 状态码 **200**
 
-| 名称      | 类型    | 必选 | 约束 | 中文名 | 说明   |
+| 名称      | 类型     | 必选 | 约束 | 中文名 | 说明   |
 | --------- | ------- | ---- | ---- | ------ | ------ |
 | » code    | integer | true | none |        | 状态码 |
 | » message | string  | true | none |        | 信息   |
-| » data    | string  | true | none |        | data   |
 
 - 返回示例
 ```json
