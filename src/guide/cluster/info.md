@@ -37,7 +37,8 @@ GET /api/cluster/type
 | --------- | ------- | ---- | ---- | ------ | ------ |
 | » code    | integer | true | none |        | 状态码 |
 | » message | string  | true | none |        | 信息   |
-| » type    | string  | true | none |        | 节点客户端版本   |
+| » type    | string  | true | none |        | 节点版本   |
+| » typeversion    | integer  | true | none |        | 节点客户端版本号   |
 
 
 
