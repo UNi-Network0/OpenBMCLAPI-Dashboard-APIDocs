@@ -18,7 +18,8 @@ GET /api/cluster/type
 {
     "code": 200,
     "msg": "success",
-    "data": "python-openbmclapi"
+    "type": "python-openbmclapi",
+    "version": "11.45.14"
 }
 ```
 
@@ -36,7 +37,7 @@ GET /api/cluster/type
 | --------- | ------- | ---- | ---- | ------ | ------ |
 | » code    | integer | true | none |        | 状态码 |
 | » message | string  | true | none |        | 信息   |
-| » data    | string  | true | none |        | data   |
+| » type    | string  | true | none |        | 节点客户端版本   |
 
 
 
