@@ -14,7 +14,7 @@ export default hopeTheme({
 
   logo: "https://theme-hope-assets.vuejs.press/logo.svg",
 
-  repo: "UNi-Network0/OpenBMCLAPI-Dashboard-APIDOC",
+  repo: "UNi-Network0/OpenBMCLAPI-Dashboard-APIDocs",
 
   docsDir: "src",
 
