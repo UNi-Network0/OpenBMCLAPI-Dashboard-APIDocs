@@ -28,15 +28,11 @@ icon: circle-info
 状态码 **200**
 | 名称      | 类型     | 必选 | 约束 | 中文名 | 说明   |
 | --------- | ------- | ---- | ---- | ------ | ------ |
-| » code    | integer | true | none |        | 状态码 |
-| » message | string  | true | none |        | 信息   |
 | » data    | string  | true | none |        | data   |
 
 - 返回示例
 ```json
 {
-    "code": 200,
-    "msg": "success",
     "data": "WebDav-Storage" 
 }
 ```
@@ -62,15 +58,11 @@ icon: circle-info
 状态码 **200**
 | 名称      | 类型     | 必选 | 约束 | 中文名 | 说明   |
 | --------- | ------- | ---- | ---- | ------ | ------ |
-| » code    | integer | true | none |        | 状态码 |
-| » message | string  | true | none |        | 信息   |
 | » data    | string  | true | none |        | data   |
 
 - 返回示例
 ```json
 {
-    "code": 200,
-    "msg": "success",
     "data": "WebDav-Storage" 
 }
 ```
@@ -97,13 +89,11 @@ icon: circle-info
 | 名称      | 类型    | 必选  | 约束 | 中文名 | 说明   |
 | --------- | ------- | ---- | ---- | ------ | ------ |
 | » code    | integer | true | none |        | 状态码 |
-| » message | string  | true | none |        | 信息   |
 
 - 返回示例
 ```json
 {
-    "code": 200,
-    "msg": "success"
+    "code": 200
 }
 ```
 
@@ -129,12 +119,10 @@ icon: circle-info
 | 名称      | 类型     | 必选 | 约束 | 中文名 | 说明   |
 | --------- | ------- | ---- | ---- | ------ | ------ |
 | » code    | integer | true | none |        | 状态码 |
-| » message | string  | true | none |        | 信息   |
 
 - 返回示例
 ```json
 {
-    "code": 200,
-    "msg": "success"
+    "code": 200
 }
 ```

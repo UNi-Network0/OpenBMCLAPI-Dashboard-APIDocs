@@ -19,15 +19,11 @@ icon: circle-info
 状态码 **200**
 | 名称      | 类型     | 必选 | 约束 | 中文名  | 说明   |
 | --------- | ------- | ---- | ---- | ------ | ------ |
-| » code    | integer | true | none |        | 状态码 |
-| » message | string  | true | none |        | 信息   |
 | » type    | string  | true | none |        | 节点版本   |
 | » version    | integer  | true | none |        | 节点客户端版本号   |
 - 返回示例
 ```json
 {
-    "code": 200,
-    "msg": "success",
     "type": "python-openbmclapi",
     "version": "11.45.14"
 }
@@ -49,10 +45,7 @@ icon: circle-info
 
 状态码 **200**
 | 名称                 | 类型    | 必选 | 约束 | 中文名             | 说明                        |
-| ------------------- | ------- | ---- | ---- | ------------------ | ---------------            |
-| » code              | integer | true | none | 状态码             | none                       |
-| » msg               | string  | true | none | 信息               | none                       |
-| » data              | object  | true | none | 数据               | none                       |
+| ------------------- | ------- | ---- | ---- | ------------------ | ---------------            |none                       |
 | » isEnabled      | boolean | true | none | 是否启用           | none                       |
 | » isSynchronized | boolean | true | none | 是否已经同步       | 如果正在同步文件，则为 false |
 | » isTrusted      | boolean | true | none | 是否为受信任的节点  | none                       |
@@ -60,14 +53,10 @@ icon: circle-info
 - 返回示例
 ```json
 {
-    "code": 200,
-    "msg": "success",
-    "data": {
-        "isEnabled": true,
-        "isSynchronized": false,
-        "isTrusted": true,
-        "uptime": 0
-    }
+    "isEnabled": true,
+    "isSynchronized": false,
+    "isTrusted": true,
+    "uptime": 0
 }
 ```
 
@@ -87,9 +76,6 @@ icon: circle-info
 状态码 **200**
 | 名称              | 类型    | 必选  | 约束 | 中文名                 | 说明                       |
 | ----------------- | ------- | ---- | ---- | --------------------- | -------------------------- |  
-| » code            | integer | true | none | 状态码                 | none                       |
-| » msg             | string  | true | none | 信息                   | none                       |
-| » data            | object  | true | none | 数据                   | none                       |
 | » name         | string  | true | none | 节点名                 | none                       |
 | » clusterId    | string  | true | none | 节点 id                | 是一个 32 位长的 hex 字符串 |         
 | » isFullsize   | boolean | true | none | 是否是全量节点         | none                       |
@@ -98,15 +84,11 @@ icon: circle-info
 - 返回示例
 ```json
 {
-    "code": 200,
-    "msg": "success",
-    "data": {
-        "name": "name",
-        "clusterId": "clusterId",
-        "fullsize": true,
-        "trust": 1000, //已弃用，详见/api/cluster/status
-        "noFastEnable": false
-    }
+    "name": "name",
+    "clusterId": "clusterId",
+    "fullsize": true,
+    "trust": 1000, //已弃用，详见/api/cluster/status
+    "noFastEnable": false
 }
 ```
 
@@ -127,8 +109,6 @@ icon: circle-info
 状态码 **200**
 | 名称                  | 类型     | 必选 | 约束 | 中文名           | 说明 |
 | --------------------- | ------- | ---- | ---- | ---------------- | ---- |
-| » code                | integer | true | none | 状态码           | none |
-| » msg                 | string  | true | none | 信息             | none |
 | » data                | object  | true | none | 数据             | none |
 | » hours            | List    | true | none | 小时流量         | none |
 | » timestamp      | integer | true | none | 时间戳           | none |
@@ -140,8 +120,6 @@ icon: circle-info
 - 返回示例
 ```json
 {
-    "code": 200,
-    "msg": "success",
     "data": {
         "hours": [
             {
@@ -185,16 +163,12 @@ icon: circle-info
 状态码 **200**
 | 名称          | 类型     | 必选  | 约束 | 中文名           | 说明                        |
 | ------------- | -------- | ---- | ---- | ---------------- | ----                       |
-| » code        | integer  | true | none | 状态码           | none                       |
-| » msg         | string   | true | none | 信息             | none                       |
 | » data        | object   | true | none | 数据             | none                       |
 | » commonUA | object   | true | none | 常见 UA          | 根据请求量排序的 UA 统计数据 |
 
 - 返回示例
 ```json
 {
-    "code": 200,
-    "msg": "success",
     "data": {
         "commonUA": {
             "PCL2" : 114514,
