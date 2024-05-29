@@ -20,12 +20,14 @@ icon: circle-info
 | 名称      | 类型     | 必选 | 约束 | 中文名  | 说明   |
 | --------- | ------- | ---- | ---- | ------ | ------ |
 | » type    | string  | true | none |        | 节点版本   |
-| » version    | integer  | true | none |        | 节点客户端版本号   |
+| » version    | string  | true | none |        | 节点客户端版本号   |
+| » cluster_version    | integer  | true | none |        | 节点端版本号   |
 - 返回示例
 ```json
 {
     "type": "python-openbmclapi",
-    "version": "11.45.14"
+    "version": "python/3.11.1 v1.0.10-BMCL1.10.8",
+    "cluster_version": "1.10.8",
 }
 ```
 
@@ -44,19 +46,21 @@ icon: circle-info
 - 返回数据结构
 
 状态码 **200**
-| 名称                 | 类型    | 必选 | 约束 | 中文名             | 说明                        |
-| ------------------- | ------- | ---- | ---- | ------------------ | ---------------            |
+| 名称                 | 类型    | 必选 | 约束 | 中文名             | 说明           |
+| ------------------- | ------- | ---- | ---- | ------------------ | ---------------        |
 | » isEnabled      | boolean | true | none | 是否启用           | none                       |
 | » isSynchronized | boolean | true | none | 是否已经同步       | 如果正在同步文件，则为 false |
 | » isTrusted      | boolean | true | none | 是否为受信任的节点  | none                       |
-| » uptime         | integer | true | none | 启用时间           | 是一个 timestamp         
+| » uptime         | integer | true | none | 启用时间           | 是一个 timestamp 精准毫秒   |
+| » timestamp      | integer | false | none | 浏览器请求的时间   | 为了修复节点端和面板的启用时间修复，在请求加个timestamp=参数（36进制格式） |
 - 返回示例
 ```json
 {
     "isEnabled": true,
     "isSynchronized": false,
     "isTrusted": true,
-    "uptime": 0
+    "uptime": 0,
+    "timestamp": 171...
 }
 ```
 
