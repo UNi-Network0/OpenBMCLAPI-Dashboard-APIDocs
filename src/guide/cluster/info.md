@@ -20,11 +20,13 @@ icon: circle-info
 | 名称      | 类型     | 必选 | 约束 | 中文名  | 说明   |
 | --------- | ------- | ---- | ---- | ------ | ------ |
 | » type    | string  | true | none |        | 节点版本   |
-| » version    | integer  | true | none |        | 节点客户端版本号   |
+| » openbmclapiVersion    | integer  | true | none |        | 兼容官方版本号   |
+| » version    | integer  | false | none |        | 节点版本号 *如果没有独立版本号返回 null  |
 - 返回示例
 ```json
 {
     "type": "python-openbmclapi",
+    "openbmclapiVersion": "1.10.6",
     "version": "11.45.14"
 }
 ```
@@ -46,17 +48,30 @@ icon: circle-info
 状态码 **200**
 | 名称                 | 类型    | 必选 | 约束 | 中文名             | 说明                        |
 | ------------------- | ------- | ---- | ---- | ------------------ | ---------------            |
+| » clusterStatus                | object  | true | none | 节点状态             | none |
 | » isEnabled      | boolean | true | none | 是否启用           | none                       |
 | » isSynchronized | boolean | true | none | 是否已经同步       | 如果正在同步文件，则为 false |
 | » isTrusted      | boolean | true | none | 是否为受信任的节点  | none                       |
-| » uptime         | integer | true | none | 启用时间           | 是一个 timestamp         
+| » uptime         | integer | true | none | 启用时间           | 是一个 timestamp         |
+| » systemOccupancy                | object  | true | none | 节点占用             | none |
+| » cpuUsagePercent                | integer  | true | none | CPU占用率             | none |
+| » memoryUsage                | integer  | true | none | 内存占用大小             | 返回数据单位为 byte |
+| » loadAverage                | integer  | true | none | 平均占用率             | *目前返回为 CPU 占用，还未讨论统一的占用率计算方式 |
+| » loadAverage                | integer  | true | none | CPU占用率             | none |
 - 返回示例
 ```json
 {
+  "clusterStatus": {
     "isEnabled": true,
     "isSynchronized": false,
     "isTrusted": true,
-    "uptime": 0
+    "uptime": 0,
+    "systemOccupancy": {
+      "cpuUsagePercent": 25.6,
+      "memoryUsage": 114514,
+      "loadAverage": 0.14
+    }
+  }
 }
 ```
 
@@ -76,7 +91,7 @@ icon: circle-info
 状态码 **200**
 | 名称              | 类型    | 必选  | 约束 | 中文名                 | 说明                       |
 | ----------------- | ------- | ---- | ---- | --------------------- | -------------------------- |  
-| » name         | string  | true | none | 节点名                 | none                       |
+| » name         | string  | true | none | 节点名                 | **[已经弃用]**                       |
 | » clusterId    | string  | true | none | 节点 id                | 是一个 32 位长的 hex 字符串 |         
 | » isFullsize   | boolean | true | none | 是否是全量节点         | none                       |
 | » trust        | integer | true | none | 信任度                 | **[已经弃用]**             |
@@ -84,7 +99,7 @@ icon: circle-info
 - 返回示例
 ```json
 {
-    "name": "name",
+    "name": "name", //已弃用
     "clusterId": "clusterId",
     "fullsize": true,
     "trust": 1000, //已弃用，详见/api/cluster/status
