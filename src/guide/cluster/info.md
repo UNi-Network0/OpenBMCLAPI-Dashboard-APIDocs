@@ -54,7 +54,6 @@ icon: circle-info
 | » isTrusted      | boolean | true | none | 是否为受信任的节点  | none                       |
 | » uptime         | integer | true | none | 启用时间           | 是一个 timestamp         |
 | » systemOccupancy                | object  | true | none | 节点占用             | none |
-| » cpuUsagePercent                | integer  | true | none | CPU占用率             | none |
 | » memoryUsage                | integer  | true | none | 内存占用大小             | 返回数据单位为 byte |
 | » loadAverage                | integer  | true | none | 平均占用率             | *目前返回为 CPU 占用，还未讨论统一的占用率计算方式 |
 | » loadAverage                | integer  | true | none | CPU占用率             | none |
@@ -67,7 +66,6 @@ icon: circle-info
     "isTrusted": true,
     "uptime": 0,
     "systemOccupancy": {
-      "cpuUsagePercent": 25.6,
       "memoryUsage": 114514,
       "loadAverage": 0.14
     }
