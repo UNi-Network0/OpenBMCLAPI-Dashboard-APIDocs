@@ -60,16 +60,14 @@ icon: circle-info
 - 返回示例
 ```json
 {
-  "clusterStatus": {
     "isEnabled": true,
     "isSynchronized": false,
     "isTrusted": true,
     "uptime": 0,
     "systemOccupancy": {
-      "memoryUsage": 114514,
-      "loadAverage": 0.14
+        "memoryUsage": 114514,
+        "loadAverage": 0.14
     }
-  }
 }
 ```
 
@@ -89,18 +87,14 @@ icon: circle-info
 状态码 **200**
 | 名称              | 类型    | 必选  | 约束 | 中文名                 | 说明                       |
 | ----------------- | ------- | ---- | ---- | --------------------- | -------------------------- |  
-| » name         | string  | true | none | 节点名                 | **[已经弃用]**                       |
 | » clusterId    | string  | true | none | 节点 id                | 是一个 32 位长的 hex 字符串 |         
 | » isFullsize   | boolean | true | none | 是否是全量节点         | none                       |
-| » trust        | integer | true | none | 信任度                 | **[已经弃用]**             |
 | » noFastEnable | boolean | true | none | 是否开启NoFastEnable   | none                      | 
 - 返回示例
 ```json
 {
-    "name": "name", //已弃用
     "clusterId": "clusterId",
     "fullsize": true,
-    "trust": 1000, //已弃用，详见/api/cluster/status
     "noFastEnable": false
 }
 ```
