@@ -54,9 +54,9 @@ icon: circle-info
 | » isTrusted      | boolean | true | none | 是否为受信任的节点  | none                       |
 | » uptime         | integer | true | none | 启用时间           | 是一个 timestamp         |
 | » systemOccupancy                | object  | true | none | 节点占用             | none |
-| » memoryUsage                | integer  | true | none | 内存占用大小             | 返回数据单位为 byte |
-| » loadAverage                | integer  | true | none | 平均占用率             | *目前返回为 CPU 占用，还未讨论统一的占用率计算方式 |
-| » loadAverage                | integer  | true | none | CPU占用率             | none |
+| \|-» memoryUsage                | integer  | true | none | 内存占用大小             | 返回数据单位为 byte |
+| \|-» loadAverage                | integer  | true | none | 平均占用率             | *目前返回为 CPU 占用，还未讨论统一的占用率计算方式 |
+<!--| » loadAverage                | integer  | true | none | CPU占用率             | none | -->
 - 返回示例
 ```json
 {
@@ -87,14 +87,12 @@ icon: circle-info
 状态码 **200**
 | 名称              | 类型    | 必选  | 约束 | 中文名                 | 说明                       |
 | ----------------- | ------- | ---- | ---- | --------------------- | -------------------------- |  
-| » clusterId    | string  | true | none | 节点 id                | 是一个 32 位长的 hex 字符串 |         
-| » isFullsize   | boolean | true | none | 是否是全量节点         | none                       |
+| » clusterId    | string  | true | none | 节点 id                | 是一个 32 位长的 hex 字符串 |   
 | » noFastEnable | boolean | true | none | 是否开启NoFastEnable   | none                      | 
 - 返回示例
 ```json
 {
     "clusterId": "clusterId",
-    "fullsize": true,
     "noFastEnable": false
 }
 ```
@@ -118,9 +116,9 @@ icon: circle-info
 | --------------------- | ------- | ---- | ---- | ---------------- | ---- |
 | » data                | object  | true | none | 数据             | none |
 | » hours            | List    | true | none | 小时流量         | none |
-| » timestamp      | integer | true | none | 时间戳           | none |
-| » hits           | integer | true | none | 访问量           | none |
-| » bytes          | integer | true | none | 流量             | none |
+| \|-» timestamp      | integer | true | none | 时间戳           | none |
+| \|-» hits           | integer | true | none | 访问量           | none |
+| \|-» bytes          | integer | true | none | 流量             | none |
 | » days             | List    | true | none | 日流量           | none |
 | » months           | List    | true | none | 月流量           | none |
 
